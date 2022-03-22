@@ -1,0 +1,495 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "BloodBank API",
+    "description": "BloodBank spec for Swagger",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/v1/createbb": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Mobile": {
+                  "example": "any"
+                },
+                "Blood_Bank_Name": {
+                  "example": "any"
+                },
+                "Password": {
+                  "example": "any"
+                },
+                "Sr_No": {
+                  "example": "any"
+                },
+                "State": {
+                  "example": "any"
+                },
+                "District": {
+                  "example": "any"
+                },
+                "City": {
+                  "example": "any"
+                },
+                "Address": {
+                  "example": "any"
+                },
+                "Pincode": {
+                  "example": "any"
+                },
+                "Contact_No": {
+                  "example": "any"
+                },
+                "Helpline": {
+                  "example": "any"
+                },
+                "Fax": {
+                  "example": "any"
+                },
+                "Email": {
+                  "example": "any"
+                },
+                "Website": {
+                  "example": "any"
+                },
+                "Nodal_Officer": {
+                  "example": "any"
+                },
+                "Contact_Nodal_Officer": {
+                  "example": "any"
+                },
+                "Mobile_Nodal_Officer": {
+                  "example": "any"
+                },
+                "Email_Nodal_Officer": {
+                  "example": "any"
+                },
+                "Qualification_Nodal_Officer": {
+                  "example": "any"
+                },
+                "Category": {
+                  "example": "any"
+                },
+                "Blood_Component_Available": {
+                  "example": "any"
+                },
+                "Apheresis": {
+                  "example": "any"
+                },
+                "Service_Time": {
+                  "example": "any"
+                },
+                "License_": {
+                  "example": "any"
+                },
+                "Date_License_Obtained": {
+                  "example": "any"
+                },
+                "Date_of_Renewal": {
+                  "example": "any"
+                },
+                "Latitude": {
+                  "example": "any"
+                },
+                "Longitude": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/v1/bblogin": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Mobile": {
+                  "example": "any"
+                },
+                "Password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "402": {
+            "description": "Payment Required"
+          }
+        }
+      }
+    },
+    "/v1/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/blood-bank": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/v1/blood-bank/{pin}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "pin",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/bb/{_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/updatebb/{_id}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Password": {
+                  "example": "any"
+                },
+                "Blood_Bank_Name": {
+                  "example": "any"
+                },
+                "Category": {
+                  "example": "any"
+                },
+                "Address": {
+                  "example": "any"
+                },
+                "City": {
+                  "example": "any"
+                },
+                "Contact_No": {
+                  "example": "any"
+                },
+                "Email": {
+                  "example": "any"
+                },
+                "Mobile": {
+                  "example": "any"
+                },
+                "Pincode": {
+                  "example": "any"
+                },
+                "State": {
+                  "example": "any"
+                },
+                "Website": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/v1/deletebb/{_id}": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/bloodstocks": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/filter/{bloodgroup}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bloodgroup",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/createbs": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "bloodGroup": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/v1/updatebs/{_id}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "bloodGroup": {
+                  "example": "any"
+                },
+                "Quantity": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "source": {
+                  "example": "any"
+                },
+                "Bloodbank": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/deletebs/{_id}": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/donors": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/donorform": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Gender": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "BloodGroup": {
+                  "example": "any"
+                },
+                "FullName": {
+                  "example": "any"
+                },
+                "City": {
+                  "example": "any"
+                },
+                "Pincode": {
+                  "example": "any"
+                },
+                "Bloodbank": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/v1/deletedonor/{_id}": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

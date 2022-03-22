@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.2.2",
     "mongoose": "^6.1.5",
-    "moongoose": "^0.0.5"
+    "moongoose": "^0.0.5",
+    "swagger-autogen": "^2.19.0",
+    "swagger-ui-express": "^4.3.0"
   }
 }
